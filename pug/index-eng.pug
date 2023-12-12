@@ -1,0 +1,197 @@
+- var title = 'Ribs and fire';
+doctype html
+html(lang="en")
+    include sections/global/head.pug
+    body(style="--pad: -145px; --pad-m: -100px")
+      include sections/global/header-eng.pug
+      section.hero#target_1
+        .hero__wrapper 
+          .container 
+            .hero__inner 
+              h1 Ribs #[br] and fire
+              h3 We will eat with our hands
+      section.dishes.section#target_2
+        .dishes__wrapper.section__wrapper
+          .container 
+            .dishes__inner 
+            .dishes__text.section__text
+              h2.dishes__title company dishes
+              p You will like the ribs because they are fresh,  carefully selected, and prepared according to a unique recipe over an open fire.
+              p There are many delicious dishes on the menu: juicy kebabs, grilled mackerel, spicy feta cheese, mamalyga, grilled Camembert, and many others - choose what you like!
+            .dishes__slider.section__slider.swiper
+              .swiper-wrapper 
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish1.png)") 
+                    .text
+                      h4.title Ribs on fire
+                      p ribs cooked on fire according to a unique recipe
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish2.png)") 
+                    .text
+                      h4.title kebabs
+                      p For chicken, pork, and beef kebab
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish3.png)") 
+                    .text
+                      h4.title Steak
+                      p Steak, only the finest beef for incredible steaks
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish4.png)") 
+                    .text
+                      h4.title Mackerel
+                      p For all fish lovers we prepare mackerel - tasty and tender
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish5.png)") 
+                    .text
+                      h4.title Peasant-style potatoes
+                      p Potatoes with a crispy crust - perfect for ribs.
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish6.png)") 
+                    .text
+                      h4.title mamalyga 
+                      p Grilled and served with cheese - is a real delicacy.
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/dish7.png)") 
+                    .text
+                      h4.title Camembert cheese
+                      p grilled Camembert with cranberry sauce.
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+              .swiper-pagination 
+              .swiper-button-prev
+              .swiper-button-next
+      section.drinks.section#target_3
+        .drinks__wrapper.section__wrapper
+          .container 
+            .drinks__inner 
+            .drinks__text.section__text
+              h2.drinks__title drinks
+              p We have a wide range of drinks for you: from good foam to fine wines, whiskey, sparkling or cocktails - order what you like.
+              p Or take a bottle of infusions - you will definitely like them!
+            .drinks__slider.section__slider.swiper
+              .swiper-wrapper 
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/drink1.png)") 
+                    .text
+                      h4.title draft beer
+                      p To the tastiest ribs - a special foam.
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/drink2.png)") 
+                    .text
+                      h4.title world wines
+                      p White/red/dry/semi-sweet/sweet - choose the one you like.
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                .swiper-slide
+                  .image(style="--bg-img: url(../../images/drink3.png)") 
+                    .text
+                      h4.title refined alcohol
+                      p Try strong drinks for any taste
+                      .fire
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+                        include ../images/svg/fire-small.svg
+      section.about.section#target_4
+        .about__wrapper.section__wrapper
+          .container 
+            .about__inner 
+              .about__image 
+                h2.about__title About us
+                p "Ribs and fire" is an institution with a soul, a special atmosphere, juicy ribs, delicious dishes and intoxicating drinks.
+                p With us, you can discard all formalities, put everyday life on pause and just enjoy the moment.
+      section.atmosphere.section#target_5
+        .atmosphere__wrapper.section__wrapper
+          .container 
+            .atmosphere__inner
+              .atmosphere__descr
+                .atmosphere__text.section__text
+                  h2.atmosphere__title atmosphere
+                  p Every corner is created with special love. For your comfort, we have thought through every detail of our establishment! We always have a pleasant and relaxed atmosphere - everything was done so that the question "where to have lunch/dinner?" there was only one answer - in "Ribs and Fire"!
+                .atmosphere__inst.desktop
+                  p @rebra.ta.vogon
+                  a(href="https://www.instagram.com/rebra.ta.vogon/" target="_blank").scop-frame
+                    include ../images/svg/inst-scope.svg
+                    .scop-text Follow us
+              .atmosphere__gallery.swiper
+                .swiper-wrapper 
+                  .swiper-slide
+                    .image(style="background-image: url(images/atm1.jpg)")
+                  .swiper-slide
+                    .image(style="background-image: url(images/atm2.jpg)")
+                  .swiper-slide
+                    .image(style="background-image: url(images/atm3.jpg)")
+              .atmosphere__inst.mobile
+                  p @rebra.ta.vogon
+                  a(href="https://www.instagram.com/rebra.ta.vogon/" target="_blank").scop-frame
+                    include ../images/svg/inst-scope.svg
+                    p.scop-text Follow us
+      section.team.section#target_6
+        .team__wrapper.section__wrapper
+          .container 
+            .team__inner
+              .team__descr 
+                .team__text.section__text 
+                  h2.team__title team
+                  p We believe that everything starts with people. From those who meet you every day at "Ribs and Fire". We proudly and confidently declare that we have assembled the best team: the most professional chefs, qualified administrators, friendly waiters, talented bartenders.
+                  p We develop our talents every day, follow new products and trends, improve, polish service and service details. We do it for you, with love.
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSfxJ3m7VPoM2l8QnxonYknqfiGQeIJ42p0QzxbDdY25iY7DPg/viewform" target="_blank").scope-frame.desktop
+                  p.scop-text Welcome to the family
+              .team__image
+                img.desktop(src="images/team.png", alt="")
+                img.mobile(src="images/team-mob.png", alt="")
+              a(href="https://docs.google.com/forms/d/e/1FAIpQLSfxJ3m7VPoM2l8QnxonYknqfiGQeIJ42p0QzxbDdY25iY7DPg/viewform" target="_blank").scope-frame.mobile
+                p.scop-text Welcome to the family
+      include sections/global/footer-eng.pug
+      //- script(src="js/main.min.js") 

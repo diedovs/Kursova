@@ -1,0 +1,197 @@
+- var title = 'Ребра та вогонь';
+doctype html
+html(lang="ua")
+    include sections/global/head.pug
+    body(style="--pad: -145px; --pad-m: -100px")
+      include sections/global/header.pug
+      main
+        section.hero#target_1
+          .hero__wrapper 
+            .container 
+              .hero__inner 
+                h1 Ребра #[br] та вогонь
+                h3 Будемо їсти руками
+        section.dishes.section#target_2
+          .dishes__wrapper.section__wrapper
+            .container 
+              .dishes__inner 
+              .dishes__text.section__text
+                h2.dishes__title фірмові страви
+                p Ребра неодмінно прийдуть тобі до смаку, адже вони тільки відбірні, свіжі та якісні, приготовані за унікальним рецептом на відкритому вогні. 
+                p В меню є безліч смачних страв: соковиті шашлики, скумбрія на грилі, пікантна бринза, мамалига, салати, камамбер на грилі та багато інших - обирай що тобі до смаку!
+              .dishes__slider.section__slider.swiper
+                .swiper-wrapper 
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish1.png)") 
+                      .text
+                        h4.title Ребра на вогні
+                        p Приготовані за унікальним рецептом на відкритому вогні 
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish2.png)") 
+                      .text
+                        h4.title шашлик
+                        p З курятини/свинини/яловичини - обирай який тобі до смаку
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish3.png)") 
+                      .text
+                        h4.title стейк
+                        p Тільки відбірна яловичина, для неймовірних стейків
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish4.png)") 
+                      .text
+                        h4.title скумбрія
+                        p Для всіх любителів риби готуємо скумбрію - смачну та ніжну
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish5.png)") 
+                      .text
+                        h4.title картопля по селянськи
+                        p Картопля з хрусткою скоринкою - ідеально пасує до ребер!
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish6.png)") 
+                      .text
+                        h4.title мамалига
+                        p Готуємо на грилі та подаємо з бринзою - справжня смакота
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/dish7.png)") 
+                      .text
+                        h4.title сир камамбер
+                        p Смажений на грилі камамбер з журавлинним соусом
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                .swiper-pagination 
+                .swiper-button-prev
+                .swiper-button-next
+        section.drinks.section#target_3
+          .drinks__wrapper.section__wrapper
+            .container 
+              .drinks__inner 
+              .drinks__text.section__text
+                h2.drinks__title напої
+                p Маємо для тебе широкий асортимент напоїв: від доброго пінного до вишуканих вин, віскі, ігристого чи коктейлів  - замовляй те, що любиш. 
+                p Або ж бери пляшку наливанок - вони тобі точно смакуватимуть!
+              .drinks__slider.section__slider.swiper
+                .swiper-wrapper 
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/drink1.png)") 
+                      .text
+                        h4.title розливне пиво
+                        p До найсмачніших ребер - особливе пінне.
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/drink2.png)") 
+                      .text
+                        h4.title світові вина
+                        p Біле/червоне/сухе/напівсолодке/солодке - обирай, яке любиш.
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                  .swiper-slide
+                    .image(style="--bg-img: url(../../images/drink3.png)") 
+                      .text
+                        h4.title вишуканий алкоголь
+                        p Спробуй міцні напої на будь який смак
+                        .fire
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+                          include ../images/svg/fire-small.svg
+        section.about.section#target_4
+          .about__wrapper.section__wrapper
+            .container 
+              .about__inner 
+                .about__image 
+                  h2.about__title Про нас
+                  p «Ребра та вогонь» - заклад з душею, особливою атмосферою, соковитими ребрами, смачними стравами та п’янкими напоями.
+                  p З нами ти можеш відкинути всі формальності, поставити буденність на паузу і просто насолоджуватись моментом.
+        section.atmosphere.section#target_5
+          .atmosphere__wrapper.section__wrapper
+            .container 
+              .atmosphere__inner
+                .atmosphere__descr
+                  .atmosphere__text.section__text
+                    h2.atmosphere__title атмосфера
+                    p Кожен куток створений з особливою любов’ю. Задля вашого комфорту ми продумали кожну деталь нашого закладу! В нас завжди приємна та невимушена атмосфера - все було зроблено для того, щоб на запитання «куди на обід/вечерю?» відповідь була одна — у «Ребра та Вогонь»!
+                  .atmosphere__inst.desktop
+                    p @rebra.ta.vogon
+                    a(href="https://www.instagram.com/rebra.ta.vogon/" target="_blank").scop-frame
+                      include ../images/svg/inst-scope.svg
+                      .scop-text Слідкуй за нами
+                .atmosphere__gallery.swiper
+                  .swiper-wrapper 
+                    .swiper-slide
+                      .image(style="background-image: url(images/atm1.JPG)")
+                    .swiper-slide
+                      .image(style="background-image: url(images/atm2.JPG)")
+                    .swiper-slide
+                      .image(style="background-image: url(images/atm3.JPG)")
+                .atmosphere__inst.mobile
+                    p @rebra.ta.vogon
+                    a(href="https://www.instagram.com/rebra.ta.vogon/" target="_blank").scop-frame
+                      include ../images/svg/inst-scope.svg
+                      p.scop-text Слідкуй за нами
+        section.team.section#target_6
+          .team__wrapper.section__wrapper
+            .container 
+              .team__inner
+                .team__descr 
+                  .team__text.section__text 
+                    h2.team__title команда
+                    p Ми віримо в те, що все починається з людей. З тих, хто щодня зустрічають вас у «Ребра та Вогонь». З гордістю та впевненістю заявляємо, що зібрали найкращу команду: найпрофесійніші кухарі, кваліфіковані адміністратори, привітні офіціанти, талановиті бармени.
+                    p Ми щодня розвиваємо свої таланти, слідкуємо за новинками й трендами, вдосконалюємось, відшліфовуємо сервіс та деталі обслуговування. Ми робимо це для вас, з любов’ю.
+                  a(href="https://docs.google.com/forms/d/e/1FAIpQLSfxJ3m7VPoM2l8QnxonYknqfiGQeIJ42p0QzxbDdY25iY7DPg/viewform" target="_blank").scope-frame.desktop
+                    p.scop-text Запрошуємо в сім’ю
+                .team__image
+                  img.desktop(src="images/team.png", alt="")
+                  img.mobile(src="images/team-mob.png", alt="")
+                a(href="https://docs.google.com/forms/d/e/1FAIpQLSfxJ3m7VPoM2l8QnxonYknqfiGQeIJ42p0QzxbDdY25iY7DPg/viewform" target="_blank").scope-frame.mobile
+                  p.scop-text Запрошуємо в сім’ю
+      include sections/global/footer.pug

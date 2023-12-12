@@ -1,0 +1,52 @@
+@mixin font($size, $height, $weight) {
+	font-size: $size+px;
+	line-height: $height+px;
+	font-weight: $weight;
+}
+@mixin vw-font($size, $height, $weight) {
+	font-size: vw($size);
+	line-height: vw($height);
+	font-weight: $weight;
+}
+@mixin xd-vw-font($size, $height, $weight) {
+	font-size: xd-vw($size);
+	line-height: xd-vw($height);
+	font-weight: $weight;
+}
+@mixin transition($duration) {
+	-webkit-transition: all $duration;
+	-moz-transition: all $duration;
+	transition: all $duration;
+}
+@mixin transform($percentage) {
+	-webkit-transform: translateY($percentage);
+	-moz-transform: translateY($percentage);
+	-ms-transform: translateY($percentage);
+	-o-transform: translateY($percentage);
+	transform: translateY($percentage);
+}
+/// Remove the unit of a length
+/// @param {Number} $number - Number to remove unit from
+/// @return {Number} - Unitless number
+@function strip-unit($number) {
+	@if type-of($number) == 'number' and not unitless($number) {
+		@return $number / ($number * 0 + 1);
+  }
+	
+  @return $number;
+}
+@function vw($px) {
+	@return unquote(strip-unit($px)/768*100+"vw");
+}
+@function xd-vw($px) {
+	@return unquote(strip-unit($px)/375*100+"vw");
+}
+@function l-vw($px) {
+	@return unquote(strip-unit($px)/1024*100+"vw");
+}
+
+@mixin flex-center() {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}

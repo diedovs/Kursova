@@ -1,0 +1,255 @@
+.questionnaries {
+  padding: 40px 34px;
+  width: 100%;
+  border-left: 1px solid $silver-color;
+  border-top: 1px solid $silver-color;
+
+  @include media-breakpoint-down(md) {
+    padding: 0 16px;
+    padding-top: 28px;
+  }
+
+  &__new,
+  &__completed {
+    .btn {
+      margin: unset;
+
+      @include media-breakpoint-down(md) {
+        width: unset;
+        margin-top: 20px;
+      }
+    }
+  }
+
+  &__new {
+    margin-bottom: 60px;
+
+    .btn {
+      padding: 17px 44px;
+      background-color: $black-color;
+      color: #fff;
+    }
+  }
+
+  &__completed {
+    .btn {
+      padding: 17px 48px;
+      background-color: #fff;
+      color: $black-color;
+    }
+  }
+
+  &__title {
+    text-transform: uppercase;
+    color: $black-color;
+    margin-bottom: 30px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 24px;
+    }
+  }
+
+  &__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f8f7f7;
+    border-radius: 8px;
+    padding: 24px;
+    margin-bottom: 24px;
+
+    &:last-child {
+      margin-bottom: 60px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding: 32px 20px;
+      display: block;
+    }
+  }
+
+  &__text {
+    padding-left: 4px;
+    text-transform: uppercase;
+  }
+}
+
+.settings {
+  display: none;
+  padding: 40px;
+  padding-bottom: 80px;
+  width: 100%;
+  border-left: 1px solid $silver-color;
+  border-top: 1px solid $silver-color;
+
+  @include media-breakpoint-down(lg) {
+    padding: 25px 15px;
+    padding-bottom: 60px;
+  }
+
+  .forward-btn {
+    display: flex;
+    align-items: center;
+    font-family: "Pulse";
+    @include font(14, 18, 400);
+    text-transform: uppercase;
+    cursor: pointer;
+
+    svg {
+      margin-right: 7px;
+    }
+  }
+
+  h6 {
+    margin: 33px 0 24px;
+
+    @include media-breakpoint-down(lg) {
+      margin: 25px 0 20px;
+    }
+  }
+
+  &__item {
+    border-top: 1px solid $silver-color;
+    padding: 24px 0 28px;
+
+    @include media-breakpoint-down(lg) {
+      padding: 32px 0;
+    }
+
+    &:last-child {
+      padding-bottom: 16px;
+    }
+
+    label {
+      position: relative;
+      display: block;
+      margin-bottom: 16px;
+      font-family: "BwMitga";
+      padding-left: 34px;
+      @include font(16, 25, 400);
+      color: $dark-gray-color;
+
+      @include media-breakpoint-down(lg) {
+        margin-bottom: 20px;
+        @include font(14, 22, 400);
+      }
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+
+      .circle {
+        position: absolute;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        top: 3px;
+        left: 0;
+        border: 1px solid $silver-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        .dot {
+          width: 12px;
+          height: 12px;
+          border-radius: 50%;
+        }
+      }
+
+      .check-mark {
+        position: absolute;
+        width: 18px;
+        height: 18px;
+        border: 2px solid $silver-color;
+        border-radius: 2px;
+        top: 3px;
+        left: 0;
+      }
+    }
+
+    input {
+      display: none;
+      position: relative;
+    }
+
+    input:checked+label {
+
+      .circle {
+        border: 1px solid $black-color;
+
+        .dot {
+          background-color: $black-color;
+        }
+      }
+
+      .check-mark {
+        border: unset;
+        background-image: url("../../images/svg/check-mark.svg");
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+      }
+    }
+
+    textarea {
+      padding: 24px;
+      border: 1px solid $silver-color;
+      height: 145px;
+      width: 100%;
+      resize: none;
+      font-family: "BwMitga";
+      @include font(16, 25, 400);
+      color: $dark-gray-color;
+
+      &::placeholder {
+        color: $silver-color;
+      }
+
+      @include media-breakpoint-down(lg) {
+        padding: 20px 15px;
+
+        @include media-breakpoint-down(lg) {
+          @include font(14, 22, 400);
+        }
+      }
+    }
+  }
+
+  &__title {
+    position: relative;
+    padding-left: 24px;
+    margin-bottom: 24px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+
+    &::before {
+      content: attr(data-count);
+      position: absolute;
+      left: 0;
+      font-weight: 700;
+    }
+  }
+
+  .descr {
+    color: $dark-gray-color;
+  }
+
+  .btn_black {
+    font-family: "Pulse";
+    @include font (14, 18, 400);
+    text-transform: uppercase;
+    color: #fff;
+    padding: 17px 58px;
+    border-radius: 41px;
+    background-color: $black-color;
+    margin-top: 48px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+      width: 100%;
+    }
+  }
+}

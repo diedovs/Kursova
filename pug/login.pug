@@ -1,0 +1,17 @@
+html(lang="en")
+  head
+    include sections/global/head.pug
+    script(src="js/main.min.js")
+  body 
+    .wrapper 
+      .container
+        .login
+          .login__title 
+            p Авторизація
+          input.login__input(type="text", name="login" placeholder="login")
+          input.login__input(type="password", name="passphrase" placeholder="password")
+          button.login__submit(type="submit", onclick="loginStart()", id="login_submit") Логін
+          .errors
+            p.wrong Логін або пароль помилкові
+script.
+  routeAdmin('div.login');

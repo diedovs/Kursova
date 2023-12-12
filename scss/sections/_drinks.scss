@@ -1,0 +1,29 @@
+.drinks {
+  position: relative;
+  // top: calc(-145px * 2);
+  top: calc(var(--pad) * 2);
+
+  @include media-breakpoint-down(md) {
+    top: calc(var(--pad-m) *2);
+  }
+
+  &__wrapper {
+    background-image: url(../../images/red-bg.png);
+
+    @include media-breakpoint-down(md) {
+      background-image: url(../../images/red-bg-mob.png);
+    }
+  }
+
+  &__slider {
+
+    .image {
+      margin-top: 20px;
+    }
+  }
+
+  &__text {
+    color: #fff;
+  }
+
+}

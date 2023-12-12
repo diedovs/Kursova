@@ -1,0 +1,62 @@
+header.header 
+  .header__wrapper 
+    .container 
+      .header__inner 
+        a(href="#target_1").header__logo 
+          include ../../../images/svg/logo3.svg
+        ul.header__menu 
+          li#pointer_1.header__link.active
+            a(href="#target_1") Головна
+          li#pointer_2.header__link
+            a(href="#target_2") Страви
+          li#pointer_3.header__link
+            a(href="#target_3") Напої
+          li#pointer_4.header__link
+            a(href="#target_4") Про нас
+          li#pointer_5.header__link
+            a(href="#target_5") Атмосфера
+          li#pointer_6.header__link
+            a(href="#target_6") Команда
+        button.lang 
+          a(href="/index-eng.html") EN
+        a(href="/menu.html").header__dest.scop-frame
+          .scop-text Онлайн меню
+            
+        .header__contact 
+          a(href="tel:+380992677273")  (099) 267-72-73
+          p вул. Головна, 119Б
+          p заїзд з пр. Казарменого 
+        .header__burger 
+          span 
+          span 
+          span 
+  .heager__mobile.mobile-menu
+    .mobile-menu__wrapper 
+      .container 
+        .mobile-menu__inner 
+          ul.mobile-menu__list 
+            li.mobile-menu__link
+              a(href="#target_1") головна
+            li.mobile-menu__link
+              a(href="#target_2") страви
+            li.mobile-menu__link
+              a(href="#target_3") напої
+            li.mobile-menu__link
+              a(href="#target_4") про нас
+            li.mobile-menu__link
+              a(href="#target_5") атмосфера
+            li.mobile-menu__link
+              a(href="#target_6") команда
+    .mobile-contact__wrapper 
+      .container 
+        .mobile-contact__inner 
+          a(href="tel:+380992677273").phone (099) 267-72-73
+          .adress
+            p вул. Головна, 119Б
+            p заїзд з пр. Казарменого
+          .social 
+            p Слідкуй за нами в соцмережах
+            a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+              include ../../../images/svg/inst.svg
+            a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+              include ../../../images/svg/fb.svg

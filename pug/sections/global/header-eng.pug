@@ -1,0 +1,62 @@
+header.header 
+        .header__wrapper 
+          .container 
+            .header__inner 
+              a(href="#target_1").header__logo 
+                include ../../../images/svg/logo3.svg
+              ul.header__menu 
+                li#pointer_1.header__link.active
+                  a(href="#target_1") Main
+                li#pointer_2.header__link
+                  a(href="#target_2") Dishes
+                li#pointer_3.header__link
+                  a(href="#target_3") Drinks
+                li#pointer_4.header__link
+                  a(href="#target_4") About us
+                li#pointer_5.header__link
+                  a(href="#target_5") Atmosphere
+                li#pointer_6.header__link
+                  a(href="#target_6") Team
+              button.lang 
+                a(href="/")  UA
+              a(href="/menu.html").header__dest.scop-frame
+                .scop-text Online menu
+                  
+              .header__contact 
+                a(href="tel:+380992977273")  (099) 297-72-73
+                p Holovna street, 119
+                p near Kazarmenyi ln
+              .header__burger 
+                span 
+                span 
+                span 
+        .heager__mobile.mobile-menu
+          .mobile-menu__wrapper 
+            .container 
+              .mobile-menu__inner 
+                ul.mobile-menu__list 
+                  li.mobile-menu__link
+                    a(href="#target_1") main
+                  li.mobile-menu__link
+                    a(href="#target_2") dishes
+                  li.mobile-menu__link
+                    a(href="#target_3") drinks
+                  li.mobile-menu__link
+                    a(href="#target_4") about us
+                  li.mobile-menu__link
+                    a(href="#target_5") atmosphere
+                  li.mobile-menu__link
+                    a(href="#target_6") team
+          .mobile-contact__wrapper 
+            .container 
+              .mobile-contact__inner 
+                a(href="tel:+380992977273").phone (099) 297-72-73
+                .adress
+                  p Holovna street, 119
+                  p near Kazarmenyi ln
+                .social 
+                  p Follow us on social networks
+                  a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+                    include ../../../images/svg/inst.svg
+                  a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+                    include ../../../images/svg/fb.svg

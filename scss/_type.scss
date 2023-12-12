@@ -1,0 +1,96 @@
+/*
+  example:
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: #fff
+  }
+  
+  h1 {
+    @include font(128, 122, 500);
+  
+    @include media-breakpoint-down(md) {
+      @include font(56, 53, 500);
+    }
+  }
+  
+  h2 {
+    @include font(100, 96, 500);
+  
+    @include media-breakpoint-down(md) {
+      @include font(44, 42, 500);
+    }
+  }
+  
+  p {
+    font-family: "BwMitga";
+  }
+*/
+
+h1,
+h3,
+h4,
+li,
+p {
+  font-family: "IBM";
+}
+
+h1,
+h2,
+h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  @include font(100, 110, 700);
+
+  @include media-breakpoint-down(md) {
+    @include font (75, 75, 700);
+    margin-bottom: 15px;
+  }
+
+  @include media-breakpoint-down(sm) {
+    @include font (56, 56, 700);
+  }
+}
+
+h2 {
+  font-family: "Montserrat";
+  @include font(32, 39, 600);
+  margin-bottom: 30px;
+
+  @include media-breakpoint-down(md) {
+    @include font(20, 24, 600);
+  }
+}
+
+h3 {
+  @include font(50, 110, 500);
+
+  @include media-breakpoint-down(md) {
+    @include font(20, 28, 500);
+  }
+}
+
+h4 {
+  @include font(20, 26, 600);
+
+  @include media-breakpoint-down(md) {
+    @include font(16, 20, 600);
+  }
+}
+
+li {
+  @include font(14, 18, 500);
+}
+
+p {
+  @include font(16, 21, 400);
+
+  &.scop-text {
+    @include font(20, 26, 400);
+  }
+}

@@ -1,0 +1,103 @@
+.our-services {
+  padding: 116px 0 93px;
+  &__title {
+    border-bottom: 1px solid #554D46;
+    padding-bottom: 46px;
+  }
+  &__category {
+    margin-top: 28px;
+    h4 {
+      color: #E2DAD1;
+      margin-bottom: 28px;
+    }
+    &--items {
+      display: flex;
+      width: 100%;
+      @include media-breakpoint-down(lg) {
+        flex-direction: column;
+      }
+    }
+    &--item {
+      width: 50%;
+      min-height: calc(50vw/1.8);
+      background-size: cover;
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        min-height: calc(100vw/1.306);
+      }
+    }
+    &--wrapper {
+      padding: 42px 40px 37px;
+      transition: 0.3s;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      h5 {
+        margin-bottom: 23px;
+        position: relative;
+        padding-left: 22px;
+        &:before {
+          content: "";
+          width: 8px;
+          height: 8px;
+          position: absolute;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #fff;
+        }
+      }
+      p, li {
+        font-family: "BwMitga", sans-serif;
+        @include font(16, 26, 400);
+      }
+      a {
+        display: block;
+        width: 51px;
+        height: 51px;
+        margin-top: auto;
+        background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTEiIHZpZXdCb3g9IjAgMCA1MSA1MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjUuNSIgY3k9IjI1LjUiIHI9IjI1IiBzdHJva2U9IndoaXRlIi8+CjxnIGNsaXAtcGF0aD0idXJsKCNjbGlwMF8xNTlfMTQ0MikiPgo8cGF0aCBkPSJNMzMuMzcyMyAxNy4zMDM0TDIzLjIwODEgMTcuMjA1NUMyMi45NDMzIDE3LjIwMjkgMjIuNzI2OSAxNy40MTUyIDIyLjcyNDQgMTcuNjc5OUMyMi43MjE4IDE3Ljk0NDYgMjIuOTM0MSAxOC4xNjExIDIzLjE5ODggMTguMTYzNkwzMi4yMDYzIDE4LjI1MDRMMTcuMjk2OCAzMi44NzUzQzE3LjEwNzggMzMuMDYwOCAxNy4xMDQ4IDMzLjM2MzkgMTcuMjkwMyAzMy41NTNDMTcuNDc1OCAzMy43NDIgMTcuNzc4OSAzMy43NDUgMTcuOTY3OSAzMy41NTk1TDMyLjg3NzQgMTguOTM0NkwzMi43OTA2IDI3Ljk0MjFDMzIuNzg4MSAyOC4yMDY4IDMzLjAwMDQgMjguNDIzMiAzMy4yNjUxIDI4LjQyNThDMzMuMzk3NCAyOC40MjcgMzMuNTE3NyAyOC4zNzQ2IDMzLjYwNTIgMjguMjg4N0MzMy42OTI4IDI4LjIwMjkgMzMuNzQ3NSAyOC4wODM2IDMzLjc0ODggMjcuOTUxM0wzMy44NDY3IDE3Ljc4NzFDMzMuODQ5MyAxNy41MjI0IDMzLjYzNyAxNy4zMDYgMzMuMzcyMyAxNy4zMDM0WiIgZmlsbD0id2hpdGUiLz4KPC9nPgo8ZGVmcz4KPGNsaXBQYXRoIGlkPSJjbGlwMF8xNTlfMTQ0MiI+CjxyZWN0IHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuMjM3MyAyNS4zNDMzKSByb3RhdGUoLTQ0LjQ0NzkpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+        &:hover {
+          background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNTEiIGhlaWdodD0iNTEiIHZpZXdCb3g9IjAgMCA1MSA1MSIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPGNpcmNsZSBjeD0iMjUuNSIgY3k9IjI1LjUiIHI9IjI1IiBmaWxsPSJ3aGl0ZSIgc3Ryb2tlPSJ3aGl0ZSIvPgo8ZyBjbGlwLXBhdGg9InVybCgjY2xpcDBfMTBfMzQ0KSI+CjxwYXRoIGQ9Ik0zMy4zNzIzIDE3LjMwMzRMMjMuMjA4MSAxNy4yMDU1QzIyLjk0MzQgMTcuMjAyOSAyMi43MjY5IDE3LjQxNTMgMjIuNzI0NCAxNy42Nzk5QzIyLjcyMTggMTcuOTQ0NyAyMi45MzQyIDE4LjE2MTEgMjMuMTk4OCAxOC4xNjM2TDMyLjIwNjMgMTguMjUwNEwxNy4yOTY4IDMyLjg3NTNDMTcuMTA3OCAzMy4wNjA4IDE3LjEwNDggMzMuMzYzOSAxNy4yOTAzIDMzLjU1M0MxNy40NzU4IDMzLjc0MjEgMTcuNzc4OSAzMy43NDUgMTcuOTY3OSAzMy41NTk1TDMyLjg3NzQgMTguOTM0NkwzMi43OTA2IDI3Ljk0MjFDMzIuNzg4MSAyOC4yMDY4IDMzLjAwMDQgMjguNDIzMyAzMy4yNjUxIDI4LjQyNThDMzMuMzk3NCAyOC40MjcgMzMuNTE3NyAyOC4zNzQ2IDMzLjYwNTMgMjguMjg4N0MzMy42OTI4IDI4LjIwMjkgMzMuNzQ3NSAyOC4wODM2IDMzLjc0ODggMjcuOTUxM0wzMy44NDY4IDE3Ljc4NzFDMzMuODQ5MyAxNy41MjI0IDMzLjYzNyAxNy4zMDYgMzMuMzcyMyAxNy4zMDM0WiIgZmlsbD0iIzEyMTIxMiIvPgo8L2c+CjxkZWZzPgo8Y2xpcFBhdGggaWQ9ImNsaXAwXzEwXzM0NCI+CjxyZWN0IHdpZHRoPSIyMyIgaGVpZ2h0PSIyMyIgZmlsbD0id2hpdGUiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDkuMjM3MyAyNS4zNDMzKSByb3RhdGUoLTQ0LjQ0NzkpIi8+CjwvY2xpcFBhdGg+CjwvZGVmcz4KPC9zdmc+Cg==");
+        }
+      }
+      li {
+        position: relative;
+        padding-left: 22px;
+        &:before {
+          content: "";
+          width: 4px;
+          height: 4px;
+          position: absolute;
+          border-radius: 50%;
+          left: 0;
+          top: 50%;
+          transform: translateY(-50%);
+          background-color: #fff;
+        }
+      }
+      p, ul, a {
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+        transition: 0.3s;
+      }
+      p, ul {
+        margin-bottom: 25px;
+      }
+      &:hover {
+        background-color: rgba(18, 18, 18, 0.75);
+        p, ul, a {
+          opacity: 1;
+          visibility: visible;
+          pointer-events: all;
+        }
+      }
+    }
+  }
+  a.btn {
+    margin-top: 72px;
+  }
+}

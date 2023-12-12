@@ -1,0 +1,84 @@
+.main {
+  padding: 300px 0 120px;
+  @include media-breakpoint-down(md) {
+    padding: 150px 0 150px;
+  }
+  background-image: url(../../images/menu-red.jpg);
+  .main-slide {
+    height: 500px;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    @include media-breakpoint-down(xl) {
+      height: 400px;
+    }
+    @include media-breakpoint-down(lg) {
+      height: 350px;
+    }
+    @include media-breakpoint-down(md) {
+      height: 200px;
+    }
+    // img {
+    //   display: block;
+    //   margin: 0 auto;
+    // }
+  }
+  .swiper {
+    padding-bottom: 100px;
+    @include media-breakpoint-down(md) {
+      padding-bottom: unset;
+    }
+  }
+  .swiper-pagination {
+    .swiper-pagination-bullet {
+      width: 10px;
+      height: 10px;
+      background-color: #fff;
+      opacity: 1;
+      border: 5px solid transparent;
+      margin-bottom: 3px;
+    }
+
+    .swiper-pagination-bullet-active {
+      width: 15px;
+      height: 15px;
+      margin-bottom: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev,
+  .swiper-button-next {
+    &::after {
+      height: 80px;
+      width: 8px;
+      content: url(../../images/svg/arrow-white.svg);
+    }
+
+    top: unset;
+    height: 15px;
+    width: 8px;
+    bottom: 8px;
+
+    @include media-breakpoint-down(md) {
+      display: none;
+    }
+  }
+
+  .swiper-button-prev {
+    left: calc(50% - 75px);
+  }
+
+  .swiper-button-next {
+    right: calc(50% - 75px);
+
+    &::after {
+      transform: rotate(180deg);
+      height: 42px;
+    }
+  }
+}

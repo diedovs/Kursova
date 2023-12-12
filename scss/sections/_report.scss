@@ -1,0 +1,21 @@
+.report {
+  padding: 112px 0 140px;
+
+  @include media-breakpoint-down(lg) {
+    padding: 68px 0 60px;
+  }
+
+  &__title {
+    text-align: center;
+    border-bottom: 1px solid $silver-color;
+    padding-bottom: 32px;
+    margin-bottom: 32px;
+  }
+
+  img {
+    margin: 0 auto;
+    display: block;
+    max-width: 1020px;
+    width: 100%;
+  }
+}

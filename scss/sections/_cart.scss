@@ -1,0 +1,395 @@
+.cart {
+  background-image: url(../../images/menu-red.jpg);
+  padding-top: 285px;
+  padding-bottom: 740px;
+  @include media-breakpoint-down(lg) {
+    padding-bottom: 1020px;
+  }
+  @include media-breakpoint-down(md) {
+    padding-top: 145px;
+    padding-bottom: 980px;
+  }
+  &__wrapper {
+    position: relative;
+  }
+  &.menu-cart {
+    @include media-breakpoint-down(md) {
+      display: none;
+      &.show-mob {
+        display: block;
+      }
+    }
+  }
+  button,
+  .item,
+  .flex {
+    color: #fff;
+  }
+  &__items {
+    margin-bottom: 48px;
+  }
+  &__title p {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    @include font(32, 40, 600);
+    @include media-breakpoint-down(md) {
+      @include font(20, 24, 600);
+    }
+  }
+  .cart-empty {
+    p {
+      color: #fff;
+      @include font(32, 40, 500);
+      text-align: center;
+      padding: 40px 20px;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+  .cart-clear {
+    opacity: 0;
+    @include font(24, 30, 500);
+    border-bottom: 1px solid #fff;
+    @include media-breakpoint-down(md) {
+      @include font(12, 15, 500);
+    }
+    &.show {
+      opacity: 1;
+    }
+  }
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #fff;
+    padding-bottom: 40px;
+  }
+  .item {
+    position: relative;
+    padding: 20px 0;
+    display: grid;
+    grid-template-columns: 220px 2fr 1fr 200px 20px;
+    grid-column-gap: 10px;
+    grid-row-gap: 10px;
+    > * {
+      place-self: center; /* Fix IE support error */
+    }
+    // display: flex;
+    // justify-content: space-between;
+    color: #fff;
+    border-bottom: 1px solid #fff;
+    @include media-breakpoint-down(md) {
+      grid-template-columns: 1fr 1fr 1fr;
+      > * {
+        place-self: end; /* Fix IE support error */
+      }
+    }
+    &__image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      width: 220px;
+      height: 220px;
+      @include media-breakpoint-down(lg) {
+        width: 200px;
+        height: 200px;
+        margin-right: 20px;
+      }
+      @include media-breakpoint-down(md) {
+        width: 80px;
+        height: 80px;
+        margin-right: 10px;
+      }
+      img {
+        height: 100%;
+      }
+    }
+    &__descr {
+      display: flex;
+    }
+    &__flex {
+      display: flex;
+      align-items: center;
+    }
+    &__title {
+      p:first-child {
+        margin-bottom: 10px;
+        @include font(24, 30, 500);
+        @include media-breakpoint-down(lg) {
+          @include font(20, 20, 500);
+          margin-bottom: 5px;
+        }
+        @include media-breakpoint-down(md) {
+          @include font(16, 20, 500);
+        }
+      }
+      p:last-child {
+        @include font(14, 18, 500);
+        @include media-breakpoint-down(md) {
+          @include font(13, 25, 400);
+        }
+      }
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        top: 15px;
+        left: 100px;
+      }
+    }
+    &__count {
+      display: flex;
+      align-items: center;
+      p {
+        @include font(24, 30, 600);
+        text-align: center;
+        min-width: 80px;
+        // @include media-breakpoint-down(md) {
+        //   margin: 0 10px;
+        // }
+      }
+      a {
+        // disable cursor selection
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        // ---
+        @include font(20, 30, 400);
+        width: 25px;
+        height: 30px;
+        text-align: center;
+        cursor: pointer;
+        @include media-breakpoint-down(md) {
+          border: 1px solid #fff;
+          width: 25px;
+          height: 25px;
+          border-radius: 50%;
+          padding-bottom: 5px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+        }
+      }
+    }
+    &__price {
+      p {
+        @include font(24, 30, 500);
+        @include media-breakpoint-down(md) {
+          @include font(16, 20, 600);
+        }
+      }
+    }
+    &__clear {
+      @include media-breakpoint-down(md) {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+      }
+    }
+  }
+  .total {
+    margin-bottom: 60px;
+    font-family: "Montserrat";
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    display: none;
+    &.show {
+      display: flex;
+    }
+    &__title p {
+      @include font(32, 40, 600);
+      @include media-breakpoint-down(md) {
+        @include font(20, 25, 600);
+      }
+    }
+    &__price p {
+      @include font(40, 48, 600);
+      @include media-breakpoint-down(md) {
+        @include font(24, 30, 600);
+      }
+    }
+  }
+  button.scop-frame {
+    background-image: url(../../../images/svg/scope-border-white.svg);
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    padding: 27px 40px;
+    width: fit-content;
+    text-align: center;
+    width: 100%;
+    margin-top: 40px;
+  }
+  .checkbox {
+    &:first-child {
+      margin-bottom: 20px;
+    }
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    input {
+      display: none;
+    }
+    &__item {
+      &:first-child {
+        margin-right: 80px;
+      }
+      label {
+        display: flex;
+        align-items: center;
+        p {
+          @include media-breakpoint-down(md) {
+            @include font(12, 16, 500);
+          }
+        }
+        .circle {
+          margin-right: 20px;
+          width: 20px;
+          height: 20px;
+          border-radius: 50%;
+          background-color: #fff;
+          border: 2px solid #fff;
+          @include media-breakpoint-down(md) {
+            margin-right: 10px;
+          }
+        }
+      }
+      input:checked + label {
+        .circle {
+          background-color: #af1e23;
+        }
+      }
+    }
+  }
+  .form {
+    margin: 0 auto;
+    max-width: 790px;
+    display: none;
+    position: relative;
+    max-height: 650px;
+    overflow: hidden;
+    .stage {
+      top: 0;
+      position: relative;
+      height: 650px;
+      transition: top 1s linear;
+      &.result {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        text-align: center;
+        h3,
+        p {
+          color: #fff;
+        }
+      }
+    }
+    &.show {
+      display: block;
+    }
+    .form-flex {
+      display: flex;
+      justify-content: space-between;
+      input {
+        width: 49%;
+      }
+    }
+    input {
+      width: 100%;
+      margin-bottom: 20px;
+      padding: 15px 40px;
+      @include media-breakpoint-down(md) {
+        padding: 7px 15px;
+        @include font(12, 16, 400);
+      }
+      &.address-input {
+        display: none;
+      }
+      &.show {
+        display: block;
+      }
+      &.error {
+        border: 1px solid #ff0000;
+        box-shadow: inset 0 0 10px #ff0000;
+        &::placeholder {
+          color: #ff0000;
+        }
+      }
+    }
+    textarea {
+      width: 100%;
+      padding: 15px 40px;
+      margin-bottom: 20px;
+      @include media-breakpoint-down(md) {
+        padding: 7px 15px;
+        @include font(12, 16, 400);
+      }
+    }
+    .card-pay {
+      display: block;
+      &.hidden {
+        display: none;
+      }
+    }
+  }
+
+  // .cart-list {
+  //   display: none;
+  // }
+}
+
+.agreement {
+  position: fixed;
+  background-image: url(../../images/menu-red.jpg);
+  transform: translateX(100%);
+  transition: linear 250ms;
+  padding: 280px 60px;
+  margin: 0 auto;
+  color: #fff;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  @include media-breakpoint-down(md) {
+    background-image: url(../../images/white-mob.png);
+    padding: 135px 30px;
+  }
+
+  &__title,
+  &__descr {
+    max-width: 890px;
+    margin: 0 auto;
+    @include media-breakpoint-down(md) {
+      color: #000;
+    }
+  }
+  &__title p {
+    font-family: "Montserrat";
+    @include font(32, 40, 600);
+    text-transform: uppercase;
+    margin-bottom: 40px;
+    @include media-breakpoint-down(md) {
+      @include font(20, 24, 600);
+      margin-bottom: 20px;
+    }
+  }
+  &__descr p {
+    @include font(16, 20, 400);
+    &:last-child {
+      margin-top: 20px;
+    }
+    @include media-breakpoint-down(md) {
+      @include font(10, 14, 500);
+    }
+  }
+  @include media-breakpoint-down(md) {
+    transform: translateY(100%);
+    z-index: 1;
+  }
+  &.show {
+    transform: translateY(0%);
+  }
+  &.show-mob {
+    transform: translateY(0%);
+  }
+}

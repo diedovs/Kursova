@@ -1,0 +1,11 @@
+doctype html
+html(lang="en")
+    include sections/global/head.pug
+    body
+        - var pages = [];
+        .sitemap
+            p.sitemap__count="Page count: "+pages.length
+            .sitemap__items
+                each page in pages
+                    a(class="sitemap__item" href=page+".html")= page
+    script(src="js/main.min.js")

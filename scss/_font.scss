@@ -1,0 +1,57 @@
+/* 
+formats:
+.otf = "OpenType"
+.ttf = "TrueType"
+.woff2 = "woff2"
+.woff = "woff"
+
+
+weights:
+100 - Thin
+200 - Extra light (Ultra light)
+300 - Light
+400 - Normal (Regular)
+500 - Medium
+600 - Semi Bold (Demi bold)
+700 - Bold
+800 - Extra bold (Ultra bold)
+900 - Black (Heavy)
+
+example:
+  @font-face {
+    font-family: "FontName";
+    src: url("..dir/fontname.otf") format("OpenType");
+    font-weight: 400;
+  }
+
+*/
+
+@font-face {
+  font-family: "IBM";
+  src: url("../fonts/IBM Plex Mono/IBMPlexMono-Regular.ttf") format("TrueType");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url("../fonts/IBM Plex Mono/IBMPlexMono-Medium.ttf") format("TrueType");
+  font-weight: 500;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url("../fonts/IBM Plex Mono/IBMPlexMono-SemiBold.ttf") format("TrueType");
+  font-weight: 600;
+}
+
+@font-face {
+  font-family: "IBM";
+  src: url("../fonts/IBM Plex Mono/IBMPlexMono-Bold.ttf") format("TrueType");
+  font-weight: 700;
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat Alternates/MontserratAlternates-SemiBold.ttf") format("TrueType");
+  font-weight: 600;
+}

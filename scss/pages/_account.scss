@@ -1,0 +1,368 @@
+.account {
+  &__wrapper {
+    margin-top: 103px;
+  }
+
+  &__info {
+    padding: 40px;
+    width: 100%;
+    border-left: 1px solid $silver-color;
+    border-top: 1px solid $silver-color;
+
+    @include media-breakpoint-down(md) {
+      padding: 0 16px;
+      padding-top: 28px;
+    }
+  }
+
+  &__links {
+    width: 100%;
+    max-width: 337px;
+    font-family: "Pulse";
+    color: $black-color;
+    text-transform: uppercase;
+    @include font (16, 20, 400);
+
+    li {
+      padding: 20px 0 20px 40px;
+      border-top: 1px solid $silver-color;
+      border-left: 1px solid $silver-color;
+
+      &:last-child {
+        border-bottom: 1px solid $silver-color;
+      }
+
+      &.active {
+        border-left: 5px solid $gray-color;
+        padding-left: 35px;
+      }
+
+      p {
+        margin-left: 15px;
+      }
+    }
+  }
+
+
+  .section {
+    max-width: 740px;
+    margin-bottom: 60px;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 40px;
+    }
+
+    &__wrapper {
+      display: flex;
+      justify-content: space-between;
+
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+
+    &.general {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      width: 100%;
+    }
+
+    &__input {
+      position: relative;
+      margin-top: 32px;
+      width: 100%;
+      max-width: 350px;
+
+      &:nth-child(even) {
+        margin-right: 32px;
+
+        @include media-breakpoint-down(md) {
+          margin-right: 15px;
+        }
+
+        @include media-breakpoint-down(sm) {
+          margin-right: unset;
+        }
+      }
+
+      p.input-title {
+        @include font (12, 15, 400);
+        text-transform: uppercase;
+        color: $dark-gray-color;
+        white-space: nowrap;
+      }
+
+      @include media-breakpoint-down(md) {
+        margin-right: unset;
+        margin-top: 28px;
+      }
+
+      input {
+        width: 100%;
+        border-bottom: 1px solid $silver-color;
+        padding: 6px 0 12px;
+        @include font(16, 25, 400);
+        color: $black-color;
+        font-family: "BwMitga";
+
+        @include media-breakpoint-down(md) {
+          @include font(14, 22, 400);
+          padding: 10px 0 11px;
+        }
+
+        &:focus-visible {
+          outline: none;
+        }
+
+        &::placeholder {
+          color: $silver-color;
+        }
+      }
+
+      &_small {
+        width: 160px;
+      }
+
+      &_smaller {
+        width: 150px;
+
+        @include media-breakpoint-down(md) {
+          width: 160px;
+        }
+      }
+
+      .draw-icon {
+        position: absolute;
+        bottom: 14px;
+        right: 0;
+
+        p {
+          display: none;
+          font-family: "BwMitga";
+          @include font (14, 17, 400);
+          text-transform: uppercase;
+          color: $gray-color;
+          cursor: pointer;
+        }
+      }
+    }
+
+    .btn_black,
+    .btn_white {
+      border-radius: 41px;
+      text-transform: uppercase;
+      font-family: "Pulse";
+      @include font (14, 18, 400);
+
+      @include media-breakpoint-down(sm) {
+        width: 100%;
+        margin: 0 16px;
+      }
+    }
+
+    .btn_black {
+      background-color: $black-color;
+      color: #fff;
+      margin: unset;
+      padding: 17px 38px;
+
+      &.save {
+        margin-top: 40px;
+
+        @include media-breakpoint-down(lg) {
+          margin-top: 32px;
+        }
+      }
+    }
+
+    .btn_white {
+      background-color: #fff;
+      color: $black-color;
+      border: 1px solid $silver-color;
+      padding: 17px 22px;
+      margin: unset;
+      white-space: nowrap;
+    }
+
+    p.descr {
+      @include font (14, 22, 400);
+      margin-top: 16px;
+
+      @include media-breakpoint-down(md) {
+        margin-bottom: 16px;
+      }
+    }
+  }
+
+  .toggle-input,
+  .toggle-card-info,
+  .update-payment,
+  .toggle-card-holder,
+  .toggle-card-text-d {
+    display: none;
+  }
+
+  .credit-card-holder {
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-between;
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+    }
+  }
+
+  .credit-card-info {
+    display: none;
+
+    .top-line,
+    .bottom-line {
+      display: flex;
+      justify-content: space-between;
+
+    }
+
+    .top-line {
+      flex-wrap: wrap;
+
+      .section__input {
+        margin-right: 38px;
+
+        @include media-breakpoint-down(sm) {
+          margin-right: 28px;
+        }
+
+        &:last-child {
+          margin-right: unset;
+        }
+
+        &:first-child {
+          @include media-breakpoint-down(sm) {
+            margin-right: unset;
+          }
+        }
+      }
+    }
+
+    .bottom-line {
+      @include media-breakpoint-down(lg) {
+        display: block;
+      }
+
+      .section__input {
+        &:first-child {
+          margin-right: 32px;
+
+          @include media-breakpoint-down(lg) {
+            margin-right: unset;
+          }
+        }
+
+        &:last-child {
+          margin-right: unset;
+        }
+      }
+    }
+  }
+
+  .toggle-card-holder {
+    .section__input {
+      width: 304px;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+      }
+    }
+  }
+
+  .small-inputs {
+    width: 350px;
+  }
+
+  // table
+  table {
+    box-shadow: 0 0 4px $silver-color;
+    border-radius: 12px;
+    margin-top: 28px;
+
+    tr {
+      border-top: 1px solid $silver-color;
+
+      &:first-child {
+        border-top: unset;
+      }
+    }
+
+    th {
+      @include font(14, 17, 400);
+      text-transform: uppercase;
+      color: $black-color;
+      padding: 20px 0;
+
+      &:last-child {
+        @include media-breakpoint-down(sm) {
+          display: none;
+        }
+      }
+    }
+
+    td {
+      padding: 18px 0;
+      color: $dark-gray-color;
+    }
+
+    th,
+    td {
+      width: 200px;
+      padding-left: 24px;
+
+      &:last-child {
+        text-align: center;
+      }
+    }
+  }
+
+  &__footer {
+    border-top: 1px solid $silver-color;
+    padding: 30px 0 42px;
+
+    p,
+    a {
+      color: $black-color;
+    }
+
+    p {
+      @include media-breakpoint-down (lg) {
+        margin-bottom: 32px;
+        text-align: center;
+      }
+    }
+
+    a {
+      &:first-child {
+        padding-right: 18px;
+        border-right: 1px solid $silver-color;
+      }
+
+      &:last-child {
+        padding-left: 18px;
+      }
+    }
+  }
+
+  .ss-main .ss-single-selected {
+    border-radius: unset;
+    border: unset;
+    border-bottom: 1px solid $silver-color;
+    height: 44px;
+  }
+
+  .placeholder {
+    background-color: transparent;
+    padding: 8px 0 12px;
+  }
+}

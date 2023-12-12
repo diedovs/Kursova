@@ -1,0 +1,124 @@
+.case {
+  &__hero {
+    @include media-breakpoint-down(lg) {
+      padding-bottom: 60px;
+    }
+  }
+
+  &__head,
+  &__text,
+  &__logo {
+    color: #fff;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__logo {
+    margin-bottom: 24px;
+  }
+
+  &__head {
+    @include font(60, 57, 500);
+    text-transform: uppercase;
+    margin-bottom: 16px;
+    white-space: unset;
+  }
+
+  &__text {
+    width: fit-content;
+    @include font(16, 25, 400);
+    text-align: left;
+    padding-bottom: 24px;
+    margin-bottom: 28px;
+    border-bottom: 1px solid #fff;
+
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+      padding-bottom: 20px;
+      @include font(14, 22, 400);
+    }
+  }
+}
+
+.case-info {
+  margin-top: 55px;
+
+  &__text,
+  &__image {
+    width: 50%;
+
+    @include media-breakpoint-down(lg) {
+      width: 100%;
+    }
+  }
+
+  &__image {
+    padding: 40px 40px 0;
+    border-top: 1px solid $silver-color;
+    border-bottom: 1px solid $silver-color;
+
+    @include media-breakpoint-down(lg) {
+      padding: 28px 0 20px;
+    }
+
+    img {
+      width: 100%;
+
+      @include media-breakpoint-up(xxl) {
+        max-height: 620px;
+        margin: 0 auto;
+        display: block;
+        width: unset;
+      }
+    }
+  }
+
+  .item {
+
+    &__title,
+    &__value {
+      padding-left: 40px;
+      width: 100%;
+      border: 1px solid $silver-color;
+
+      @include media-breakpoint-down(lg) {
+        padding: 0 15px;
+      }
+    }
+
+    &__title {
+      padding-top: 20px;
+      padding-bottom: 17px;
+      text-transform: uppercase;
+      color: $black-color;
+
+      &.short {
+        width: 100%;
+        max-width: 343px;
+
+        @include media-breakpoint-down(lg) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &__value {
+      width: 100%;
+      padding-bottom: 27px;
+
+      p {
+        @include font(16, 25, 400);
+        color: $dark-gray-color;
+        padding-top: 19px;
+
+        @include media-breakpoint-down(lg) {
+          @include font(14, 22, 400)
+        }
+      }
+
+      span {
+        font-weight: 700;
+      }
+    }
+  }
+}

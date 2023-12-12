@@ -1,0 +1,326 @@
+- var title = 'Ребра та вогонь';
+doctype html
+html(lang="ua")
+    include sections/global/head.pug
+    body(style="--pad: -145px; --pad-m: -100px")
+      header.header.menu.hide-menu
+        .header__wrapper 
+          .container 
+            .header__inner 
+              a(href="tel:+380992677273").phone.menu
+                include ../images/svg/phone.svg
+              a(href="/#target_1").header__logo 
+                include ../images/svg/logo3.svg
+              ul.header__menu 
+                li#pointer_1.header__link.active
+                  a(href="/#target_1") Головна
+                li#pointer_2.header__link
+                  a(href="/#target_2") Страви
+                li#pointer_3.header__link
+                  a(href="/#target_3") Напої
+                li#pointer_4.header__link
+                  a(href="/#target_4") Про нас
+                li#pointer_5.header__link
+                  a(href="/#target_5") Атмосфера
+                li#pointer_6.header__link
+                  a(href="/#target_6") Команда
+              a(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank").header__dest.scop-frame.menu
+                .scop-text Як доїхати?
+                  
+              .header__contact 
+                a(href="tel:+380992677273")  (099) 267-72-73
+                p вул. Головна, 119Б
+                p заїзд з пр. Казарменого 
+              .header__burger 
+                span 
+                span 
+                span 
+        .header-menu__wrapper 
+          .container 
+            .header-menu__inner
+              a(href="menu.html").back-to-menu.menu Назад в меню
+              a.mob-delivery-btn.menu
+                include ../images/svg/delivery.svg
+                p Доставка
+              a.cart-button 
+                include ../images/svg/cart.svg
+                p.price 0
+                p.menu грн
+              a.delivery.show.menu Доставка
+              a.back-to-cart.menu Назад до кошика
+              a.mob-menu-btn.menu
+                .flex
+                  span.dot
+                  span.dot
+                  span.dot
+                p Меню
+        .header__mobile.mobile-menu
+          .mobile-menu__wrapper 
+            .container 
+              .mobile-menu__inner 
+                ul.mobile-menu__list 
+                  li.mobile-menu__link
+                    a(href="/#target_1") головна
+                  li.mobile-menu__link
+                    a(href="/#target_2") страви
+                  li.mobile-menu__link
+                    a(href="/#target_3") напої
+                  li.mobile-menu__link
+                    a(href="/#target_4") про нас
+                  li.mobile-menu__link
+                    a(href="/#target_5") атмосфера
+                  li.mobile-menu__link
+                    a(href="/#target_6") команда
+          .mobile-contact__wrapper 
+            .container 
+              .mobile-contact__inner 
+                a(href="tel:+380992677273").phone (099) 267-72-73
+                .adress
+                  p вул. Головна, 119Б
+                  p заїзд з пр. Казарменого
+                .social 
+                  p Слідкуй за нами в соцмережах
+                  a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/inst.svg
+                  a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/fb.svg
+            //- .menu-header 
+              .container 
+                .menu-header__inner
+                  ul.menu-header__list
+                    li 
+                      a(href="") Ребра
+                    li 
+                      a(href="") До ребер
+                    li 
+                      a(href="") Страви з коптильні
+                    li 
+                      a(href="") Страви на грилі
+                    li 
+                      a(href="") Перші страви
+                    li
+                      a(href="") Десерти
+                    li
+                      a(href="").more-btn Більше
+                  button.cart-icon
+                    include ../images/svg/cart.svg
+                    .cart-count 
+                      p 0
+                      p грн
+                  ul.menu-header__collaps 
+                    li
+                      a(href="") Дитяче меню
+                    li
+                      a(href="") Напої
+                    li
+                      a(href="") Фреші
+                    li
+                      a(href="") Води
+                    li
+                      a(href="") Вина
+                    li
+                      a(href="") Алкогольні напої
+                    li
+                      a(href="") Алкогольні коктейлі
+                    li
+                      a(href="") Кава/чай
+        .header-menu-mob
+          ul.mob-menu__container
+            li.mob-menu
+              a(href="/menu.html#2") 
+                include ../images/svg/ribs.svg
+                p Ребра
+
+            li.mob-menu
+              a(href="/menu.html#3") 
+                include ../images/svg/corn.svg
+                p До ребер
+
+            li.mob-menu
+              a(href="/menu.html#4") 
+                include ../images/svg/Smoked.svg
+                p Страви з коптильні
+
+            li.mob-menu
+              a(href="/menu.html#5") 
+                include ../images/svg/Grill.svg
+                p Страви на грилі
+
+            li.mob-menu
+              a(href="/menu.html#6") 
+                include ../images/svg/Soup.svg
+                p Перші страви
+
+            li.mob-menu
+              a(href="/menu.html#7") 
+                include ../images/svg/Dessert.svg
+                p Десерти
+
+            li.mob-menu
+              a(href="/menu.html#8") 
+                include ../images/svg/Kids.svg
+                p Дитяче меню
+
+            li.mob-menu
+              a(href="/menu.html#9") 
+                include ../images/svg/juice.svg
+                p Напої
+
+            li.mob-menu
+              a(href="/menu.html#10") 
+                include ../images/svg/Fresh.svg
+                p Фреші
+
+            li.mob-menu
+              a(href="/menu.html#11") 
+                include ../images/svg/Water.svg
+                p Води
+
+            li.mob-menu
+              a(href="/menu.html#12") 
+                include ../images/svg/Wine.svg
+                p Вина
+
+            li.mob-menu
+              a(href="/menu.html#13") 
+                include ../images/svg/Beer.svg
+                p Пиво
+
+            li.mob-menu
+              a(href="/menu.html#14") 
+                include ../images/svg/Alcohol.svg
+                p Алкогольні напої
+
+            li.mob-menu
+              a(href="/menu.html#15") 
+                include ../images/svg/Coktail.svg
+                p Алкогольні коктейлі
+
+            li.mob-menu
+              a(href="/menu.html#16") 
+                include ../images/svg/coffee-tea.svg
+                p Кава та чай
+
+      section.cart.cart_page
+        .cart__wrapper
+          .container 
+            .cart__inner.cart-list
+              .flex 
+                .cart__title 
+                  p Кошик
+                button.cart-clear очистити кошик
+              .cart-empty
+                p Тут порожньо... Перейдіть в меню і зробіть замовлення
+              .cart__items 
+                //-
+                //- .item 
+                //-   .item__image 
+                //-     img(src="images/menu.png", alt="")
+                //-   .item__title 
+                //-     p Ребра на вогні
+                //-     p 400г
+                //-   .item__count 
+                //-     a.minus -
+                //-     p.quantity 1
+                //-     a.plus +
+                //-   .item__price 
+                //-     p 229 грн
+                //-   .item__clear 
+                //-     include ../images/svg/close.svg
+                //- .item 
+                //-   .item__image 
+                //-     img(src="images/menu.png", alt="")
+                //-   .item__title 
+                //-     p Скумбрія на грилі
+                //-     p 200г
+                //-   .item__count 
+                //-     a.minus -
+                //-     p.quantity 1
+                //-     a.plus +
+                //-   .item__price 
+                //-     p 224 грн
+                //-   .item__clear  
+                //-     include ../images/svg/close.svg
+              .cart__total.total 
+                .total__title
+                  p Всього:
+                .total__price 
+                  p 608 грн
+              .form
+                .stage.process
+                  .delivery__checkbox.checkbox 
+                    .checkbox__item.item-delivery
+                      input(type="radio", id="delivery", name="delivery" checked)
+                      label(for="delivery") 
+                        .circle
+                        p Доставка в межах міста
+                    .checkbox__item.item-self
+                      input(type="radio", id="self", name="delivery")
+                      label(for="self") 
+                        .circle
+                        p Самовиніс
+                  .form-flex
+                    input.address-input.show(type="text", name="address" autocomplete='address-line1' placeholder="Адреса *" required)
+                    input.address-input.show(type="text", name="numb" autocomplete='address-line3' placeholder="Будинок *" required)
+                  input.address-input.show(type="text", name="entrance" placeholder="Під’їзд")
+                  textarea(name="comment", cols="30", rows="10" placeholder="Комендар до замовлення")
+                  .form-flex
+                    input(type="tel", name="phone" autocomplete='phone' onfocus="javascript:maskMe(this)" placeholder="Номер телефону *" required)
+                    input(type="text", name="name" autocomplete='name' placeholder="Ім’я *" required)
+                  .pay__checkbox.checkbox 
+                    .checkbox__item 
+                      input(type="radio", id="cashpay", name="pay" checked)
+                      label(for="cashpay") 
+                        .circle
+                        p Оплата готівкою
+                    //- .checkbox__item.card-pay
+                    .checkbox__item.card-pay
+                      input(type="radio", id="cardpay", name="pay")
+                      label(for="cardpay")
+                        .circle
+                        p Оплата кур'єру терміналом
+                  //- button(type="submit" onclick="javascript:sendOrder(e)").scop-frame Оформити замовлення
+                  button.scop-frame(onclick="javascript:sendOrder(this.closest('div.stage.process'))") Оформити замовлення
+                .stage.result
+                  h3 Дякуємо за ваше замовлення
+                  p Наш менеджер зв'яжеться з вами найближчим часом
+                  button.scop-frame(onclick="javascript:history.back()") Повернутися
+
+            .menu__inner.agreement 
+              .agreement__title 
+                p Умови доставки і оплати: 
+              .agreement__descr 
+                p – Замовлення на доставку приймаються з 12:00 до 20:30 без вихідних, доставка здійснюється до 21:30.
+                p – Оператор зателефонує Вам протягом 15 хв. після того, як Ви зробите замовлення на сайті.
+                p – Час доставки – від 40 хв; Уточнюємо при прийомі замовлення.
+                p – Можлива оплата готівкою, або безготівковий розрахунок(через термінал ПриватБанку).
+                p – Вартість доставки – від 70грн (залежно від адреси доставки).
+                p – Вартість доставки в Садгору, Чагор, В. Кучурів, Годилів, Коровію, Рошу, Острицю та Магалу – від 120 грн.
+                p Ресторан «Ребра та вогонь» завжди на зв'язку. З приводу пропозицій, співпраці, скарг чи наявних вакансій та замовлень Ви завжди можете зателефонувати за номером +380992677273
+      footer.footer.white
+        .footer__wrapper.white
+          .container.d-flex.flex-column.justify-content-between
+            .footer__inner 
+              p.phone.black ЗАМОВЛЯЙТЕ ДОСТАВКУ СМАЧНИХ РЕБЕР  –
+              a(href="tel:+380992677273").phone.black (099) 267-72-73
+              .footer__descr
+                .left 
+                  .footer__logo 
+                    include ../images/svg/fire-large-red.svg
+                .right
+                  p.address.red Вул. Головна, 119 Б #[br]заїзд з пр. Казарменого
+                  a.scop-frame.desktop.black(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank")
+                    p.scop-text.black Прокласти маршрут
+              a.scop-frame.mobile.black(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank")
+                p.scop-text.black Прокласти маршрут
+              .footer__social 
+                h2.footer__title.black слідкуйте за нами в соціальних мережах
+                .social-links 
+                  a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/inst-red.svg
+                  a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/fb-red.svg
+            .footer__copyright
+              p 2023 © "Rebra ta vogon"
+              p.abs Розробник сайту WebCo 
+      script(src="js/main.min.js")

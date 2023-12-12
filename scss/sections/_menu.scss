@@ -1,0 +1,288 @@
+.menu {
+  &__wrapper {
+    background-image: url(../../images/white.png);
+  }
+  &__inner {
+    position: relative;
+    top: -140px;
+  }
+  h2 {
+    font-family: "Montserrat";
+    text-transform: uppercase;
+    color: #000;
+  }
+  .group {
+    padding-top: 100px;
+    &__items {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      @include media-breakpoint-down(lg) {
+        grid-template-columns: repeat(3, 1fr);
+      }
+      @include media-breakpoint-down(md) {
+        display: block;
+      }
+    }
+  }
+  .first-group {
+    background-image: url(../../images/white-bg.png);
+    padding-top: 200px;
+  }
+  .menu-group:not(.first-group) {
+    background-image: url(../../images/white.png);
+  }
+  .item {
+    padding-bottom: 40px;
+    @include media-breakpoint-down(md) {
+      display: flex;
+    }
+    &__image {
+      margin-bottom: 30px;
+      height: 215px;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      @include media-breakpoint-down(md) {
+        width: 110px;
+        height: 110px;
+        flex-shrink: 0;
+        border-radius: 5px;
+        margin-right: 20px;
+      }
+      img {
+        width: 100%;
+      }
+    }
+    &__descr {
+      width: 100%;
+      min-height: 210px;
+      position: relative;
+      padding-bottom: 40px;
+      @include media-breakpoint-down(md) {
+        min-height: unset;
+        padding-bottom: unset;
+        position: unset;
+      }
+    }
+    &__title {
+      font-family: "Montserrat";
+      @include font(24, 30, 500);
+      margin-bottom: 15px;
+      @include media-breakpoint-down(md) {
+        @include font(16, 20, 500);
+        margin-bottom: 5px;
+      }
+    }
+    &__subtitle {
+      @include font(16, 20, 400);
+      color: #000;
+      margin-bottom: 15px;
+      @include media-breakpoint-down(md) {
+        @include font(12, 12, 400);
+        margin-bottom: 5px;
+      }
+    }
+    &__footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      @include media-breakpoint-down(md) {
+        position: unset;
+      }
+    }
+    .price {
+      @include font(20, 24, 600);
+      &::after {
+        content: "₴";
+      }
+      @include media-breakpoint-down(md) {
+        @include font(16, 20, 600);
+      }
+    }
+    .add-to-cart {
+      padding: 10px 30px;
+      cursor: pointer;
+      color: #fff;
+      @include font(16, 20, 400);
+      background-color: #af1e23;
+      transition: linear 250ms;
+      @include media-breakpoint-down(md) {
+        padding: 5px 10px;
+      }
+      &:hover {
+        background-color: #000;
+      }
+    }
+  }
+  .show-more,
+  .show-less {
+    display: block;
+    @include font(14, 18, 500);
+    margin: 0 auto;
+    margin-top: 50px;
+    transition: linear 250ms;
+    &:hover {
+      color: #af1e23;
+      border-bottom: 1px solid #af1e23;
+    }
+    &.hidden {
+      display: none;
+    }
+  }
+}
+
+.menu-popup {
+  display: none;
+  background-color: #0000009c;
+  position: fixed;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  &__container {
+    @include media-breakpoint-down(md) {
+      position: relative;
+    }
+  }
+  &.flex {
+    display: flex;
+  }
+  .popup {
+    background-image: url(../../images/menu-red.jpg);
+    max-width: 980px;
+    min-width: 900px;
+    display: flex;
+    @include media-breakpoint-down(lg) {
+      min-width: 760px;
+    }
+    @include media-breakpoint-down(md) {
+      display: block;
+      min-width: 300px;
+      // min-width: unset;
+    }
+    &__image,
+    &__content {
+      width: 50%;
+      @include media-breakpoint-down(md) {
+        width: 100%;
+      }
+    }
+    &__image {
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+      @include media-breakpoint-down(md) {
+        height: 300px;
+      }
+    }
+    .item {
+      position: relative;
+      color: #fff;
+      padding: 80px 50px;
+      @include media-breakpoint-down(md) {
+        position: unset;
+        padding: 20px 20px 15px 20px;
+      }
+      &__close-btn {
+        cursor: pointer;
+        position: absolute;
+        top: 30px;
+        right: 30px;
+        @include media-breakpoint-down(md) {
+          top: 25px;
+        }
+      }
+      &__title p {
+        @include font(24, 30, 500);
+        margin-bottom: 10px;
+        @include media-breakpoint-down(md) {
+          @include font(16, 20, 500);
+          margin-bottom: 5px;
+        }
+      }
+      &__weight p {
+        @include font(14, 18, 400);
+        margin-bottom: 72px;
+        &::after {
+          content: "г";
+        }
+        @include media-breakpoint-down(md) {
+          @include font(10, 13, 400);
+          margin-bottom: 5px;
+        }
+      }
+      &__subtitle p {
+        @include font(16, 20, 400);
+        margin-bottom: 60px;
+        @include media-breakpoint-down(md) {
+          @include font(12, 12, 400);
+          margin-bottom: 10px;
+        }
+      }
+      &__price p {
+        @include font(20, 25, 600);
+        &::after {
+          content: "₴";
+        }
+      }
+      &__count {
+        // disable cursor selection
+        -webkit-user-select: none; /* Safari */
+        -ms-user-select: none; /* IE 10 and IE 11 */
+        user-select: none; /* Standard syntax */
+        // ---
+        @include font(20, 25, 600);
+        display: flex;
+        cursor: pointer;
+      }
+      &__add-to-cart {
+        cursor: pointer;
+        @include font(16, 20, 400);
+        border: 1px solid #fff;
+        padding: 10px 30px;
+        @include media-breakpoint-down(md) {
+          display: block;
+          text-align: center;
+        }
+      }
+      .quantity {
+        margin: 0 15px;
+      }
+      a:not(.item__add-to-cart) {
+        cursor: pointer;
+        margin: 0 auto;
+        display: block;
+        color: #fff;
+        &.minus,
+        &.plus {
+          @include media-breakpoint-down(md) {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid #fff;
+            border-radius: 50%;
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+      .flex {
+        font-family: "Montserrat";
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        margin-bottom: 40px;
+        @include media-breakpoint-down(md) {
+          margin-bottom: 20px;
+        }
+      }
+    }
+  }
+}

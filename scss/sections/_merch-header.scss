@@ -1,0 +1,25 @@
+.merch-header {
+  &__wrapper {
+    padding: 30px 0;
+
+    @include media-breakpoint-down(lg) {
+      padding: 20px 0;
+    }
+  }
+
+  &__logo {
+    @include media-breakpoint-down(lg) {
+      width: 144px;
+    }
+
+    svg {
+      width: 100%;
+    }
+  }
+
+  &__cart {
+    .count {
+      margin-right: 10px;
+    }
+  }
+}

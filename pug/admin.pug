@@ -1,0 +1,188 @@
+doctype html
+html(lang="en")
+  head
+    include sections/global/head.pug
+  body 
+    section.admin
+      .admin__wrapper 
+        .container 
+          .admin__inner 
+            .hamburger 
+              span
+              span
+              span
+            ul.group-list 
+              //- li.group-list__item.active(data-button="ribs", onclick="javascript:groupSwitch(this)")
+              //-   a Ребра
+              //- li.group-list__item(data-button="to-ribs") 
+              //-   a До ребер
+              //- li.group-list__item(data-button="smoke") 
+              //-   a Страви з коптильні
+              //- li.group-list__item(data-button="grill") 
+              //-   a Страви на грилі
+              //- li.group-list__item(data-button="dish") 
+              //-   a Перші страви
+              //- li.group-list__item(data-button="dessert") 
+              //-   a Десерти
+              //- li.group-list__item(data-button="kids") 
+              //-   a Дитяче меню
+              //- li.group-list__item(data-button="drink") 
+              //-   a Напої
+              //- li.group-list__item(data-button="fresh") 
+              //-   a Фреші
+              //- li.group-list__item(data-button="water") 
+              //-   a Води
+              //- li.group-list__item(data-button="wine") 
+              //-   a Вина
+              //- li.group-list__item(data-button="beer") 
+              //-   a Пиво
+              //- li.group-list__item(data-button="alcohol") 
+              //-   a Алкогольні напої
+              //- li.group-list__item(data-button="cocktail") 
+              //-   a Алкогольні коктейлі
+              //- li.group-list__item(data-button="coffee-tea") 
+              //-   a Кава та чай
+            .panel 
+              //- .panel__group.group(data-group="ribs").show
+              //-   .group__title
+              //-     p Ребра
+              //-   .group__items 
+              //-     .item
+              //-       .stage.edit-item
+              //-         .side.image
+              //-           .box_image
+              //-             label.file_upload(style="--img-pre:url(https://api.ribsandfire.com/images/c8/10/c8109a1111b24ae4b300a8bd4149911c.jpeg)")
+              //-               input(type="file")
+              //-               i.ico.upload
+              //-                 include ../images/svg/ico/ico-upload.svg
+              //-         .side.text
+              //-           input(type="hidden", name="ID")
+              //-           input(type="text", name="Name", placeholder="Назва")
+              //-           input(type="text" name="Descr", placeholder="Опис")
+              //-           input.noarrow(type="number" name="Weight", placeholder="Вага (грам)")
+              //-           input.noarrow(type="number" name="Price", placeholder="Ціна")
+              //-           input.noarrow(type="number" name="Pos", placeholder="Позиція")
+              //-           input(type="checkbox", name="Active", check="Активний", nocheck="Прихований")
+              //-         .buttons
+              //-           a.bttn.save(href="javascript:;") Зберегти
+              //-             include ../images/svg/ico/ico-save.svg
+              //-           a.bttn.cancel(href="javascript:;") Відмінити
+              //-             include ../images/svg/ico/ico-cancel.svg
+              //-       .stage.result-item(data-id="", data-active="1")
+              //-         .side.image
+              //-           .preview(style="--img-pre:url(https://api.ribsandfire.com/images/c8/10/c8109a1111b24ae4b300a8bd4149911c.jpeg)")
+              //-         .side.text
+              //-           p.item-title Title
+              //-           p.item-descr Descr
+              //-           .fe-items
+              //-             span.item-price(alt=" грн") 101.10
+              //-             span.item-weight(alt=" г") 300
+              //-         .buttons
+              //-           a.bttn.edit(href="javascript:;") Редагувати
+              //-             include ../images/svg/ico/ico-edit.svg
+              //-           a.bttn.delete(href="javascript:;") Видалити
+              //-             include ../images/svg/ico/ico-delete.svg
+          
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="to-ribs")
+              //-   .group__title
+              //-     p До ребер
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="smoke")
+              //-   .group__title
+              //-     p Страви з коптильні
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="grill")
+              //-   .group__title
+              //-     p Страви на грилі
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="dish")
+              //-   .group__title
+              //-     p Перші страви
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="dessert")
+              //-   .group__title
+              //-     p Десерти
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="kids")
+              //-   .group__title
+              //-     p Дитяче меню
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="drink")
+              //-   .group__title
+              //-     p Напої
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="fresh")
+              //-   .group__title
+              //-     p Фреші
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="water")
+              //-   .group__title
+              //-     p Води
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="wine")
+              //-   .group__title
+              //-     p Вина
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="beer")
+              //-   .group__title
+              //-     p Пиво
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="alcohol")
+              //-   .group__title
+              //-     p Алкогольні напої
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="cocktail")
+              //-   .group__title
+              //-     p Алкогольні коктейлі
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+                
+              //- .panel__group.group(data-group="coffee-tea")
+              //-   .group__title
+              //-     p Кава/чай
+              //-   .group__items 
+              //-     button.add-item
+              //-       include ../images/svg/add-item.svg
+    script(src="js/main.min.js")
+script.
+  routeAdmin('section.admin');

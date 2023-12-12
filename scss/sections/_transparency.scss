@@ -1,0 +1,225 @@
+.transparency {
+  &__wrapper {
+    padding: 120px 0;
+    background-color: $black-color;
+
+    @include media-breakpoint-down(lg) {
+      padding: 60 0;
+    }
+  }
+
+  &__title {
+    text-align: center;
+    margin-bottom: 28px;
+  }
+
+  &__text {
+    width: 100%;
+    max-width: 815px;
+    margin: 0 auto;
+    margin-bottom: 86px;
+
+    p {
+      color: $silver-color;
+      text-align: center;
+      @include font(16, 25, 400);
+
+      @include media-breakpoint-down(lg) {
+        @include font(14, 22, 400);
+      }
+    }
+  }
+
+  &__steps {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include media-breakpoint-down(lg) {
+      display: block;
+      // flex-direction: column;
+      // align-items: flex-end;
+    }
+
+    .step__wrapper {
+      position: relative;
+
+      @include media-breakpoint-down(lg) {
+        width: 100%;
+        // margin-left: auto;
+        // display: flex;
+        // justify-content: end;
+      }
+
+      &::before,
+      &::after {
+        position: absolute;
+        width: 159px;
+        color: #fff;
+        text-align: center;
+
+        @include media-breakpoint-down(lg) {
+          text-align: start;
+        }
+      }
+
+      &::before {
+        content: attr(data-count);
+        top: -38px;
+        font-family: "Pulse";
+        @include font (24, 33, 400);
+        text-transform: uppercase;
+
+        @include media-breakpoint-down(lg) {
+          top: calc(50% - 20px);
+          left: 0;
+        }
+      }
+
+      &::after {
+        content: attr(data-sign);
+        bottom: -34px;
+        font-family: "BwMitga";
+        @include font (16, 25, 400);
+
+        @include media-breakpoint-down(lg) {
+          bottom: unset;
+          left: 0;
+          top: calc(50% + 20px); //////////////////////
+        }
+      }
+
+      &:nth-child(even) {
+        &::before {
+          top: unset;
+          bottom: -38px;
+
+          @include media-breakpoint-down(lg) {
+            bottom: unset;
+            top: calc(50% - 20px);
+          }
+        }
+
+        &::after {
+          bottom: unset;
+          top: -38px;
+
+          @include media-breakpoint-down(lg) {
+            top: calc(50% + 20px); /////////////////////
+            bottom: unset;
+          }
+        }
+
+        .step {
+          // @include media-breakpoint-down(lg) {
+          //   margin-left: auto;
+          // }
+
+          &::after {
+            top: 0;
+            bottom: unset;
+
+            @include media-breakpoint-down(lg) {
+              top: unset;
+              left: unset;
+              right: 0;
+            }
+          }
+
+          &::before {
+            top: unset;
+            bottom: 0;
+
+            @include media-breakpoint-down(lg) {
+              bottom: unset;
+              left: 0;
+            }
+          }
+        }
+      }
+    }
+
+    .step {
+      position: relative;
+      width: 177px;
+      height: 177px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      margin: auto -9px;
+
+      &-circle {
+        z-index: 3;
+        width: 141px;
+        height: 141px;
+        border-radius: 50%;
+        background-color: $black-color;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+
+      &-point {
+        position: absolute;
+        width: 32px;
+        height: 32px;
+        border-radius: 50%;
+        background-color: #fff;
+        border: 8px solid $light-gray-color;
+        right: -15px;
+        top: calc(50% - 16px);
+        z-index: 4;
+
+        @include media-breakpoint-down(lg) {
+          top: unset;
+          bottom: -8px;
+          right: 72px;
+        }
+      }
+
+      &::after,
+      &::before {
+        content: '';
+        position: absolute;
+        height: 50%;
+        width: 100%;
+        z-index: 1;
+
+        @include media-breakpoint-down(lg) {
+          height: 100%;
+          width: 50%;
+        }
+      }
+
+      &::before {
+        top: 0;
+        background-color: $light-gray-color;
+        z-index: 2;
+
+        @include media-breakpoint-down(lg) {
+          top: unset;
+          right: 0;
+        }
+      }
+
+      &::after {
+        bottom: 0;
+        background-color: $dark-gray-color;
+
+        @include media-breakpoint-down(lg) {
+          bottom: unset;
+          left: 0;
+        }
+      }
+
+      @include media-breakpoint-down(lg) {
+        margin: unset;
+        margin-bottom: -18px;
+        margin-left: auto;
+      }
+    }
+  }
+}

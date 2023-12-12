@@ -1,0 +1,79 @@
+.ads {
+  &__wrapper {
+    background-color: $black-color;
+    padding: 116px 0;
+
+    @include media-breakpoint-down(md) {
+      padding: 48px 0;
+    }
+
+  }
+
+  &__title {
+    margin-bottom: 46px;
+
+    @include media-breakpoint-down(md) {
+      margin-bottom: 30px;
+    }
+
+  }
+
+  &__fb {
+    border-top: 1px solid #554D46;
+  }
+
+  .ad {
+
+    &__title {
+      margin: 28px 0;
+      color: #E2DAD1;
+    }
+
+  }
+
+  .item {
+    position: relative;
+    background-image: var(--bg-img);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 25%;
+    padding: 95px 0;
+    border: 1px solid #554d46;
+
+    @include media-breakpoint-down(md) {
+      width: 100%;
+    }
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      background-color: $black-color;
+      opacity: 0.9;
+      transition: linear 400ms;
+    }
+
+    h5 {
+      position: relative;
+      z-index: 1;
+      text-align: center;
+      color: #fff;
+      text-transform: uppercase;
+      transition: linear 400ms;
+    }
+
+    @include media-breakpoint-up(md) {
+      &:hover {
+
+        &::before,
+        h5 {
+          opacity: 0;
+        }
+      }
+    }
+  }
+}

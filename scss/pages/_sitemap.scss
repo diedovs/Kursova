@@ -1,0 +1,16 @@
+.sitemap {
+  padding: 40px;
+  &__count {
+    margin-bottom: 20px;
+  }
+  &__items {
+    display: flex;
+    flex-wrap: wrap;
+    a {
+      margin: 0 20px 20px 0;
+      padding: 8px 12px;
+      border: 1px solid $border-color;
+      border-radius: 12px;
+    }
+  }
+}

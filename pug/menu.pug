@@ -1,0 +1,698 @@
+- var title = 'Ребра та вогонь';
+doctype html
+html(lang="ua")
+    include sections/global/head.pug
+    body(style="--pad: -145px; --pad-m: -100px")
+      header.header.menu.hide-menu
+        .header__wrapper 
+          .container 
+            .header__inner 
+              a(href="tel:+380992677273").phone.menu
+                include ../images/svg/phone.svg
+              a(href="#target_1").header__logo 
+                include ../images/svg/logo3.svg
+              ul.header__menu 
+                li#pointer_1.header__link.active
+                  a(href="/#target_1") Головна
+                li#pointer_2.header__link
+                  a(href="/#target_2") Страви
+                li#pointer_3.header__link
+                  a(href="/#target_3") Напої
+                li#pointer_4.header__link
+                  a(href="/#target_4") Про нас
+                li#pointer_5.header__link
+                  a(href="/#target_5") Атмосфера
+                li#pointer_6.header__link
+                  a(href="/#target_6") Команда
+              a(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank").header__dest.scop-frame.menu
+                .scop-text Як доїхати?
+              .header__contact 
+                a(href="tel:+380992677273")  (099) 267-72-73
+                p вул. Головна, 119Б
+                p заїзд з пр. Казарменого 
+              .header__burger 
+                span 
+                span 
+                span 
+        .header-menu__wrapper 
+          .container 
+            .header-menu__inner 
+              ul.menu-list 
+                li
+                  a(href="#2").menu Ребра
+                li
+                  a(href="#3").menu До ребер
+                li
+                  a(href="#4").menu Страви з коптильні
+                li.lg-show
+                  a(href="#5").menu Страви на грилі
+                li.xl-show
+                  a(href="#6").menu Перші страви
+                li.xl-show
+                  a(href="#7").menu Десерти
+              a.more-btn.menu Більше
+              a.mob-delivery-btn.menu
+                include ../images/svg/delivery.svg
+                p Доставка
+              a(href="cart.html").cart-button 
+                include ../images/svg/cart.svg
+                p.price 0
+                p.menu грн
+              a.mob-menu-btn.menu
+                .flex
+                  span.dot
+                  span.dot
+                  span.dot
+                p Меню
+              .menu-list-container
+                ul.menu-list-hidden
+                  li.lg-show
+                    a(href="#5").menu Страви на грилі
+                  li.xl-show
+                    a(href="#6").menu Перші страви
+                  li.xl-show
+                    a(href="#7").menu Десерти
+                  li
+                    a(href="#35").menu Додатки
+                  li
+                    a(href="#8").menu Дитяче меню
+                  li
+                    a(href="#9").menu Напої
+                  li
+                    a(href="#10").menu Фреші
+                  li
+                    a(href="#11").menu Води
+                  li
+                    a(href="#12").menu Вина
+                  li
+                    a(href="#13").menu Пиво
+                  li
+                    a(href="#14").menu Алкогольні напої
+                  li
+                    a(href="#15").menu Алкогольні коктейлі
+                  li
+                    a(href="#16").menu Кава/чай
+        .header__mobile.mobile-menu
+          .mobile-menu__wrapper 
+            .container 
+              .mobile-menu__inner 
+                ul.mobile-menu__list 
+                  li.mobile-menu__link
+                    a(href="/#target_1") головна
+                  li.mobile-menu__link
+                    a(href="/#target_2") страви
+                  li.mobile-menu__link
+                    a(href="/#target_3") напої
+                  li.mobile-menu__link
+                    a(href="/#target_4") про нас
+                  li.mobile-menu__link
+                    a(href="/#target_5") атмосфера
+                  li.mobile-menu__link
+                    a(href="/#target_6") команда
+          .mobile-contact__wrapper 
+            .container 
+              .mobile-contact__inner 
+                a(href="tel:+380992677273").phone (099) 267-72-73
+                .adress
+                  p вул. Головна, 119Б
+                  p заїзд з пр. Казарменого
+                .social 
+                  p Слідкуй за нами в соцмережах
+                  a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/inst.svg
+                  a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/fb.svg
+            
+        .header-menu-mob
+          ul.mob-menu__container
+            li.mob-menu
+              a(href="#2") 
+                include ../images/svg/ribs.svg
+                p Ребра
+
+            li.mob-menu
+              a(href="#3") 
+                include ../images/svg/corn.svg
+                p До ребер
+
+            li.mob-menu
+              a(href="#4") 
+                include ../images/svg/Smoked.svg
+                p Страви з коптильні
+
+            li.mob-menu
+              a(href="#5") 
+                include ../images/svg/Grill.svg
+                p Страви на грилі
+
+            li.mob-menu
+              a(href="#6") 
+                include ../images/svg/Soup.svg
+                p Перші страви
+
+            li.mob-menu
+              a(href="#7") 
+                include ../images/svg/Dessert.svg
+                p Десерти
+            
+            li.mob-menu
+              a(href="#7") 
+                include ../images/svg/adds.svg
+                p Додатки
+
+            li.mob-menu
+              a(href="#8") 
+                include ../images/svg/Kids.svg
+                p Дитяче меню
+
+            li.mob-menu
+              a(href="#9") 
+                include ../images/svg/juice.svg
+                p Напої
+
+            li.mob-menu
+              a(href="#10") 
+                include ../images/svg/Fresh.svg
+                p Фреші
+
+            li.mob-menu
+              a(href="#11") 
+                include ../images/svg/Water.svg
+                p Води
+
+            li.mob-menu
+              a(href="#12") 
+                include ../images/svg/Wine.svg
+                p Вина
+
+            li.mob-menu
+              a(href="#13") 
+                include ../images/svg/Beer.svg
+                p Пиво
+
+            li.mob-menu
+              a(href="#14") 
+                include ../images/svg/Alcohol.svg
+                p Алкогольні напої
+
+            li.mob-menu
+              a(href="#15") 
+                include ../images/svg/Coktail.svg
+                p Алкогольні коктейлі
+
+            li.mob-menu
+              a(href="#16") 
+                include ../images/svg/coffee-tea.svg
+                p Кава та чай
+
+
+      main
+        section.main
+          .main__wrapper 
+            .container
+              .main__inner
+                .swiper
+                  .swiper-wrapper
+                    //- .swiper-slide.main-slide
+                    //-   img(src="images/menu.png", alt="alt")
+                    //- .swiper-slide.main-slide
+                    //-   img(src="images/menu.png", alt="alt")
+                    //- .swiper-slide.main-slide
+                    //-   img(src="images/menu.png", alt="alt")
+                  .swiper-pagination 
+                  .swiper-button-prev
+                  .swiper-button-next
+        section.menu 
+          .menu__wrapper
+            .menu__inner.menu-list
+              //- #ribs.menu-group.group.first-group
+              //-   .container 
+              //-     h2.group__title Ребра
+              //-     .group__items
+              //-       .item(data-id="0101")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight='200') Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price(data-price="229") 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0102")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на воді
+              //-           .item__subtitle Незабутній смак
+              //-           .item__footer 
+              //-             .price 200
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0103")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на землі
+              //-           .item__subtitle хрустка кірочка
+              //-           .item__footer 
+              //-             .price 100
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0104")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на повітрі 
+              //-           .item__subtitle та божественний аромат
+              //-           .item__footer 
+              //-             .price 50
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0105")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 25
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0106")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0107')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 25
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0108")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0109")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 25
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0110")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0111")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 25
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id="0112")
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0113')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 25
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0114')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #to-ribs.menu-group.group
+              //-   .container
+              //-     h2.group__title До ребер
+              //-     .group__items 
+              //-       .item(data-id='0201')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0202')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0203')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0204')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0205')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0206')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0207')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-       .item(data-id='0208')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #smoke.menu-group.group
+              //-   .container
+              //-     h2.group__title Страви з коптильні
+              //-     .group__items 
+              //-       .item(data-id='0301')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #grill.menu-group.group
+              //-   .container
+              //-     h2.group__title Страви на грилі
+              //-     .group__items 
+              //-       .item(data-id='0401')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #first-dishes.menu-group.group
+              //-   .container
+              //-     h2.group__title Перші страви
+              //-     .group__items 
+              //-       .item(data-id='0501')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #desserts.menu-group.group
+              //-   .container
+              //-     h2.group__title Десерти
+              //-     .group__items 
+              //-       .item(data-id='0601')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #kids-menu.menu-group.group
+              //-   .container
+              //-     h2.group__title Дитяче меню
+              //-     .group__items 
+              //-       .item(data-id='0701')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #drinks.menu-group.group
+              //-   .container
+              //-     h2.group__title Напої
+              //-     .group__items 
+              //-       .item(data-id='0801')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #fresh.menu-group.group
+              //-   .container
+              //-     h2.group__title Фреші
+              //-     .group__items 
+              //-       .item(data-id='0901')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #waters.menu-group.group
+              //-   .container
+              //-     h2.group__title Води
+              //-     .group__items 
+              //-       .item(data-id='1001')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #wines.menu-group.group
+              //-   .container
+              //-     h2.group__title Вина
+              //-     .group__items 
+              //-       .item(data-id='1101')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #beers.menu-group.group
+              //-   .container
+              //-     h2.group__title Пиво
+              //-     .group__items 
+              //-       .item(data-id='1201')
+              //-         .item__image 
+              //-           img(src="", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #alcohols.menu-group.group
+              //-   .container
+              //-     h2.group__title Алкогольні напої
+              //-     .group__items 
+              //-       .item(data-id='1301')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #cocktails.menu-group.group
+              //-   .container
+              //-     h2.group__title Алкогольні коктейлі 
+              //-     .group__items 
+              //-       .item(data-id='1401')
+              //-         .item__image 
+              //-           img(src="images/menu.png", alt="")
+              //-         .item__descr
+              //-           .item__title(data-weight="200") Ребра на вогні 
+              //-           .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+              //-           .item__footer 
+              //-             .price 229
+              //-             .add-to-cart Обрати 
+              //-     button.show-more Показати більше
+              //-     button.show-less.hidden Приховати
+              //- #coffee-tea.menu-group.group
+                .container
+                  h2.group__title Кава/чай
+                  .group__items 
+                    .item(data-id='1501')
+                      .item__image 
+                        img(src="images/menu.png", alt="")
+                      .item__descr
+                        .item__title(data-weight="200") Ребра на вогні 
+                        .item__subtitle Незабутній смак, хрустка кірочка та божественний аромат
+                        .item__footer 
+                          .price 229
+                          .add-to-cart Обрати 
+                  button.show-more Показати більше
+                  button.show-less.hidden Приховати
+        //- section.cart.menu-cart
+        section.agreement 
+          .agreement__title 
+            p Умови доставки і оплати: 
+          .agreement__descr 
+            p – Замовлення на доставку приймаються з 12:00 до 20:30 без вихідних, доставка здійснюється до 21:30.
+            p – Оператор зателефонує Вам протягом 15 хв. після того, як Ви зробите замовлення на сайті.
+            p – Час доставки – від 40 хв; Уточнюємо при прийомі замовлення.
+            p – Можлива оплата готівкою, або безготівковий розрахунок(через термінал ПриватБанку).
+            p – Вартість доставки – від 70грн (залежно від адреси доставки).
+            p – Вартість доставки в Садгору, Чагор, В. Кучурів, Годилів, Коровію, Рошу, Острицю та Магалу – від 120 грн.
+            p Ресторан «Ребра та вогонь» завжди на зв'язку. З приводу пропозицій, співпраці, скарг чи наявних вакансій та замовлень Ви завжди можете зателефонувати за номером +380992677273
+      .menu-popup 
+        .menu-popup__container.popup 
+          .popup__image
+          .popup__content.item
+            .item__close-btn 
+              include ../images/svg/close.svg
+            .item__title 
+              p
+            .item__weight 
+              p
+            .item__subtitle 
+              p
+
+            .flex
+              .item__price 
+                p
+              .item__count.count 
+                a.minus -
+                .quantity 1
+                a.plus +
+            
+            a.item__add-to-cart Додати до кошика
+
+      //- include sections/global/footer.pug
+      footer.footer.menu-footer
+        .footer__wrapper
+          .container.d-flex.flex-column.justify-content-between
+            .footer__inner 
+              p.phone ЗАМОВЛЯЙТЕ ДОСТАВКУ СМАЧНИХ РЕБЕР  –
+              a(href="tel:+380992677273").phone (099) 267-72-73
+              .footer__descr
+                .left 
+                  .footer__logo 
+                    include ../images/svg/fire-large.svg
+                .right
+                  p.address.white Вул. Головна, 119 Б #[br]заїзд з пр. Казарменого
+                  a.scop-frame.desktop(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank")
+                    p.scop-text Прокласти маршрут
+              a.scop-frame.mobile(href="https://www.google.com/maps/place/%D0%93%D0%BE%D0%BB%D0%BE%D0%B2%D0%BD%D0%B0+%D0%B2%D1%83%D0%BB%D0%B8%D1%86%D1%8F,+119%D0%B1,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D1%86%D1%96,+%D0%A7%D0%B5%D1%80%D0%BD%D1%96%D0%B2%D0%B5%D1%86%D1%8C%D0%BA%D0%B0+%D0%BE%D0%B1%D0%BB%D0%B0%D1%81%D1%82%D1%8C,+58001/@48.2834692,25.9380253,17z/data=!3m1!4b1!4m5!3m4!1s0x473408be5db4381d:0x7c236bac4b59bf76!8m2!3d48.2834692!4d25.940214" target="_blank")
+                p.scop-text Прокласти маршрут
+              .footer__social 
+                h2.footer__title слідкуйте за нами в соціальних мережах
+                .social-links 
+                  a(href="https://www.instagram.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/inst.svg
+                  a(href="https://www.facebook.com/rebra.ta.vogon", target="_blank") 
+                    include ../images/svg/fb.svg
+            .footer__copyright
+              p 2023 © "Rebra ta vogon"
+              p.abs Розробник сайту WebCo 
+      script(src="js/main.min.js")
+script.
+  requestGroupsFront();
+  requestSliderItems();

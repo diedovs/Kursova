@@ -1,0 +1,46 @@
+.hero {
+  background-color: #000000;
+  position: relative;
+  padding-top: 152px;
+
+  @include media-breakpoint-down(md) {
+    padding-top: 60px;
+  }
+
+  &::before {
+    content: '';
+    position: absolute;
+    background-image: url('../../images/hero-bg.png');
+    opacity: 0.6;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+  }
+
+  &__wrapper {
+    position: relative;
+    padding-bottom: 220px;
+    background-image: url(../../images/meet-hero.png);
+    background-position-y: 100%;
+    background-position-x: right;
+    background-repeat: no-repeat;
+    color: #fff;
+
+    @include media-breakpoint-down(md) {
+      background-image: url(../../images/meet-mobile.png);
+      background-position-y: 90%;
+      padding-bottom: 350px;
+    }
+  }
+
+  &__inner {
+    padding: 85px 0 60px;
+    position: relative;
+    z-index: 1;
+  }
+
+  &__title {
+    margin-bottom: 10px;
+  }
+}

@@ -1,0 +1,88 @@
+.google {
+  &__wrapper {
+    border-top: 1px solid $gray-color;
+    border-bottom: 1px solid $gray-color;
+    margin-top: 49px;
+
+    @include media-breakpoint-down(lg) {
+      margin-top: unset;
+    }
+  }
+
+  &__text {
+    padding-top: 30px;
+
+    @media screen and (min-width: 1660px) {
+      padding-left: 10%;
+    }
+
+    p {
+      width: 100%;
+      max-width: 500px;
+      margin-bottom: 24px;
+      @include font (16, 25, 400);
+      color: $dark-gray-color;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  &__logo {
+    margin-top: 43px;
+  }
+
+  .ads {
+    @include media-breakpoint-down(lg) {
+      margin-top: 40px;
+    }
+
+    &__item {
+      position: relative;
+      width: 100%;
+      max-width: 420px;
+      height: 400px;
+      padding: 0 25px;
+      background-image: var(--bg-img);
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      border: 1px solid $gray-color;
+
+      @include media-breakpoint-down(lg) {
+        max-width: 100%;
+      }
+
+      &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left: 0;
+        background-color: #00000099;
+      }
+    }
+
+    &__title,
+    &__text p {
+      color: #fff;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    &__title {
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    &__text p {
+      @include font(14, 22, 400);
+    }
+  }
+}

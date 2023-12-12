@@ -1,0 +1,75 @@
+.about {
+  // top: calc(-145px * 3);
+  top: calc(var(--pad) * 3);
+
+  @include media-breakpoint-down(md) {
+    top: calc(var(--pad-m) * 3);
+  }
+
+  &__wrapper {
+    background-image: url(../../images/white-bg.png);
+
+    @include media-breakpoint-down(md) {
+      background-image: url(../../images/white-bg-mob.png);
+      padding-bottom: 350px;
+    }
+  }
+
+  &__inner {
+    height: 350px;
+    background-image: url(../../images/about.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+
+    @include media-breakpoint-down(md) {
+      background-image: url(../../images/about-mobile.png);
+      height: 580px;
+    }
+  }
+
+  &__image {
+    padding-top: 75px;
+    padding-left: 490px;
+    padding-right: 140px;
+
+    @include media-breakpoint-down(xxl) {
+      padding-left: 410px;
+    }
+
+    @include media-breakpoint-down(lg) {
+      padding-left: 270px;
+      padding-right: 0;
+    }
+
+    @include media-breakpoint-down(md) {
+      padding: 45px 120px;
+    }
+
+    @media screen and (max-width: 495px) {
+      padding: 45px 100px;
+    }
+
+    @media screen and (max-width: 445px) {
+      padding: 15px 80px;
+    }
+
+    @media screen and (max-width: 385px) {
+      padding: 50px 40px;
+    }
+
+    p {
+      margin-bottom: 20px;
+
+      &:last-child {
+        margin-bottom: unset;
+      }
+    }
+  }
+
+  &__title {
+    @include media-breakpoint-down(lg) {
+      margin-bottom: 20px;
+    }
+  }
+}
